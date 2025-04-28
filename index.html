@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Agiet Pratama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      /* Background diubah menjadi tema cyber security */
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') no-repeat center center fixed;
+      background-size: cover; /* Untuk memastikan gambar latar belakang menutupi seluruh layar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .profile-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      max-width: 450px;
+      animation: fadeInUp 1.2s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+      border-radius: 25px;
+      pointer-events: none;
+    }
+
+    .profile-card .flag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 45px;
+      height: 30px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      animation: wave-flag 2s infinite alternate;
+      transform-origin: center bottom;
+    }
+
+    @keyframes wave-flag {
+      0% {
+        transform: rotateZ(0deg) translateY(0);
+      }
+      50% {
+        transform: rotateZ(5deg) translateY(-2px);
+      }
+      100% {
+        transform: rotateZ(-5deg) translateY(-2px);
+      }
+    }
+
+    .cyber-img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+      filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)) brightness(1.1) contrast(1.2);
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    .profile-card img.profile {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 25px;
+      border: 5px solid #64b5f6;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-card h1 {
+      margin: 10px 0 8px;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-card p {
+      margin: 8px 0;
+      color: #ddd;
+      font-size: 17px;
+    }
+
+    .biodata {
+      text-align: left;
+      margin-top: 25px;
+      color: #eee;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+    }
+
+    .biodata p {
+      margin: 10px 0;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .biodata strong {
+      color: #80cbc4;
+    }
+
+    .social-media {
+      margin-top: 30px;
+    }
+
+    .social-media a {
+      display: inline-block;
+      margin: 8px 12px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      background-color: rgba(0, 123, 255, 0.7);
+      padding: 12px 24px;
+      border-radius: 35px;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-media a:hover {
+      background-color: rgba(0, 123, 255, 0.9);
+      transform: translateY(-3px);
+    }
+
+    .qr-code {
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+    }
+
+    .qr-code p {
+      color: #eee;
+      margin-bottom: 10px;
+    }
+
+    .qr-code img {
+      width: 120px;
+      height: 120px;
+      margin-top: 10px;
+      filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="Bendera Indonesia">
+
+    <img class="cyber-img" src="https://cdn-icons-png.flaticon.com/512/189/189665.png" alt="Cyber Security">
+
+    <img class="profile" alt="Foto Profil Agiet Pratama">
+    <h1>Agiet Pratama</h1>
+    <p>Kelas: X TKJ 1</p>
+    <p>SMKN 1 Sidrap</p>
+
+    <div class="biodata">
+      <p><strong>Nama Lengkap:</strong> Agiet Pratama</p>
+      <p><strong>Tempat, Tanggal Lahir:</strong> Pangkajene, 30 Agustus 2009</p>
+      <p><strong>Umur:</strong> 15 Tahun</p>
+      <p><strong>Alamat:</strong> JL. Sultan Hasanuddin</p>
+      <p><strong>Kecamatan:</strong> Maritengae</p>
+      <p><strong>Kabupaten:</strong> Sidenreng Rappang</p>
+      <p><strong>Kota:</strong> Pangkajene</p>
+      <p><strong>Provinsi:</strong> Sulawesi Selatan</p>
+      <p><strong>Negara:</strong> Indonesia</p>
+      <p><strong>Hobi:</strong> Programmer</p>
+      <p><strong>Tentang Agiet:</strong></p>
+      <p>Agiet Pratama adalah seorang siswa kelas X di jurusan Teknik Komputer dan Jaringan (TKJ) 1, SMKN 1 Sidrap. Di usianya yang masih muda, Agiet telah menunjukkan minat yang besar dan bakat yang menjanjikan di dunia *programming*. Ketertarikannya pada baris kode dan logika komputasi telah tumbuh menjadi sebuah hobi yang ia tekuni dengan antusias.</p>
+      <p>Sebagai seorang calon ahli di bidang TKJ, Agiet tidak hanya fokus pada pemahaman perangkat keras dan jaringan, tetapi juga aktif mempelajari berbagai bahasa pemrograman. Ia memiliki ketertarikan khusus pada pengembangan aplikasi web dan *cyber security*, di mana kemampuan *programming* menjadi fondasi yang sangat penting. Agiet sering menghabiskan waktu luangnya untuk belajar secara mandiri melalui berbagai sumber *online*, tutorial, dan proyek-proyek kecil untuk mengasah kemampuannya.</p>
+      <p>Salah satu cita-cita terbesar Agiet adalah untuk berkarir di bidang *cyber security*. Ia terpesona dengan kompleksitas keamanan sistem informasi dan memiliki keinginan yang kuat untuk melindungi dunia digital dari berbagai ancaman kejahatan siber. Ia bermimpi untuk menjadi seorang ahli keamanan yang handal dan berkontribusi dalam menciptakan ruang siber yang aman dan terpercaya.</p>
+      <p>Semangat belajarnya yang tinggi dan keingintahuannya yang besar menjadikan Agiet sebagai siswa yang berpotensi di kelas TKJ. Ia bercita-cita untuk dapat berkontribusi dalam dunia teknologi informasi di masa depan, mungkin sebagai seorang pengembang perangkat lunak, seorang ahli keamanan siber, atau bahkan seorang inovator teknologi. Dengan dedikasi dan kerja kerasnya, bukan tidak mungkin Agiet Pratama akan menjadi salah satu talenta muda yang membanggakan di bidang teknologi dari SMKN 1 Sidrap.</p>
+    </div>
+
+    <div class="social-media">
+      <a href="https://wa.me/6285342999494" target="_blank">Chat WhatsApp</a>
+    </div>
+
+    <div class="qr-code">
+      <p>Scan WhatsApp:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://wa.me/6285342999494&size=150x150" alt="QR Code WhatsApp">
+    </div>
+  </div>
+</body>
+</html>
